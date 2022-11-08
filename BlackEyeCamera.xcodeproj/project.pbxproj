@@ -3,34 +3,33 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DE482D37288FE72A00B9D021 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE482D36288FE72A00B9D021 /* AppDelegate.swift */; };
-		DE482D39288FE72A00B9D021 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE482D38288FE72A00B9D021 /* SceneDelegate.swift */; };
-		DE482D3B288FE72A00B9D021 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE482D3A288FE72A00B9D021 /* ViewController.swift */; };
-		DE482D3E288FE72A00B9D021 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE482D3C288FE72A00B9D021 /* Main.storyboard */; };
-		DE482D40288FE72A00B9D021 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE482D3F288FE72A00B9D021 /* Assets.xcassets */; };
-		DE482D43288FE72A00B9D021 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE482D41288FE72A00B9D021 /* LaunchScreen.storyboard */; };
-		DE482D4B288FFD7D00B9D021 /* DimUnDim.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE482D4A288FFD7D00B9D021 /* DimUnDim.swift */; };
+		DE517707291A998E00ACCACC /* DimUnDim.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE517706291A998E00ACCACC /* DimUnDim.swift */; };
+		DEAB112E2912921000371406 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAB112D2912921000371406 /* AppDelegate.swift */; };
+		DEAB11302912921000371406 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAB112F2912921000371406 /* SceneDelegate.swift */; };
+		DEAB11322912921000371406 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAB11312912921000371406 /* ViewController.swift */; };
+		DEAB11352912921000371406 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEAB11332912921000371406 /* Main.storyboard */; };
+		DEAB11372912921200371406 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEAB11362912921200371406 /* Assets.xcassets */; };
+		DEAB113A2912921200371406 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEAB11382912921200371406 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		DE482D33288FE72A00B9D021 /* BlackEye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlackEye.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		DE482D36288FE72A00B9D021 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DE482D38288FE72A00B9D021 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DE482D3A288FE72A00B9D021 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DE482D3D288FE72A00B9D021 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		DE482D3F288FE72A00B9D021 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		DE482D42288FE72A00B9D021 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		DE482D44288FE72A00B9D021 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DE482D4A288FFD7D00B9D021 /* DimUnDim.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DimUnDim.swift; sourceTree = "<group>"; };
-		EE85D93E511E35F3579C2678 /* Pods_BlackEye.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlackEye.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE517706291A998E00ACCACC /* DimUnDim.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DimUnDim.swift; sourceTree = "<group>"; };
+		DEAB112A2912921000371406 /* BlackEyeCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlackEyeCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEAB112D2912921000371406 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DEAB112F2912921000371406 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		DEAB11312912921000371406 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DEAB11342912921000371406 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DEAB11362912921200371406 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DEAB11392912921200371406 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DEAB113B2912921200371406 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		DE482D30288FE72A00B9D021 /* Frameworks */ = {
+		DEAB11272912921000371406 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -40,139 +39,130 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1D671C4D6874B0BA261712F9 /* Frameworks */ = {
+		DEAB11212912921000371406 = {
 			isa = PBXGroup;
 			children = (
-				EE85D93E511E35F3579C2678 /* Pods_BlackEye.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		DE482D2A288FE72A00B9D021 = {
-			isa = PBXGroup;
-			children = (
-				DE482D35288FE72A00B9D021 /* BlackEye */,
-				DE482D34288FE72A00B9D021 /* Products */,
-				1D671C4D6874B0BA261712F9 /* Frameworks */,
+				DEAB112C2912921000371406 /* BlackEyeCamera */,
+				DEAB112B2912921000371406 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		DE482D34288FE72A00B9D021 /* Products */ = {
+		DEAB112B2912921000371406 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DE482D33288FE72A00B9D021 /* BlackEye.app */,
+				DEAB112A2912921000371406 /* BlackEyeCamera.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DE482D35288FE72A00B9D021 /* BlackEye */ = {
+		DEAB112C2912921000371406 /* BlackEyeCamera */ = {
 			isa = PBXGroup;
 			children = (
-				DE482D36288FE72A00B9D021 /* AppDelegate.swift */,
-				DE482D38288FE72A00B9D021 /* SceneDelegate.swift */,
-				DE482D3A288FE72A00B9D021 /* ViewController.swift */,
-				DE482D4A288FFD7D00B9D021 /* DimUnDim.swift */,
-				DE482D3C288FE72A00B9D021 /* Main.storyboard */,
-				DE482D3F288FE72A00B9D021 /* Assets.xcassets */,
-				DE482D41288FE72A00B9D021 /* LaunchScreen.storyboard */,
-				DE482D44288FE72A00B9D021 /* Info.plist */,
+				DEAB112D2912921000371406 /* AppDelegate.swift */,
+				DEAB112F2912921000371406 /* SceneDelegate.swift */,
+				DEAB11312912921000371406 /* ViewController.swift */,
+				DEAB11332912921000371406 /* Main.storyboard */,
+				DEAB11362912921200371406 /* Assets.xcassets */,
+				DEAB11382912921200371406 /* LaunchScreen.storyboard */,
+				DEAB113B2912921200371406 /* Info.plist */,
+				DE517706291A998E00ACCACC /* DimUnDim.swift */,
 			);
-			path = BlackEye;
+			path = BlackEyeCamera;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DE482D32288FE72A00B9D021 /* BlackEye */ = {
+		DEAB11292912921000371406 /* BlackEyeCamera */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DE482D47288FE72A00B9D021 /* Build configuration list for PBXNativeTarget "BlackEye" */;
+			buildConfigurationList = DEAB113E2912921200371406 /* Build configuration list for PBXNativeTarget "BlackEyeCamera" */;
 			buildPhases = (
-				DE482D2F288FE72A00B9D021 /* Sources */,
-				DE482D30288FE72A00B9D021 /* Frameworks */,
-				DE482D31288FE72A00B9D021 /* Resources */,
+				DEAB11262912921000371406 /* Sources */,
+				DEAB11272912921000371406 /* Frameworks */,
+				DEAB11282912921000371406 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = BlackEye;
-			productName = BlackEye;
-			productReference = DE482D33288FE72A00B9D021 /* BlackEye.app */;
+			name = BlackEyeCamera;
+			productName = BlackEyeCamera;
+			productReference = DEAB112A2912921000371406 /* BlackEyeCamera.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		DE482D2B288FE72A00B9D021 /* Project object */ = {
+		DEAB11222912921000371406 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1340;
-				LastUpgradeCheck = 1340;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
 				TargetAttributes = {
-					DE482D32288FE72A00B9D021 = {
-						CreatedOnToolsVersion = 13.4.1;
+					DEAB11292912921000371406 = {
+						CreatedOnToolsVersion = 14.0;
 					};
 				};
 			};
-			buildConfigurationList = DE482D2E288FE72A00B9D021 /* Build configuration list for PBXProject "BlackEye" */;
-			compatibilityVersion = "Xcode 13.0";
+			buildConfigurationList = DEAB11252912921000371406 /* Build configuration list for PBXProject "BlackEyeCamera" */;
+			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = DE482D2A288FE72A00B9D021;
-			productRefGroup = DE482D34288FE72A00B9D021 /* Products */;
+			mainGroup = DEAB11212912921000371406;
+			productRefGroup = DEAB112B2912921000371406 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DE482D32288FE72A00B9D021 /* BlackEye */,
+				DEAB11292912921000371406 /* BlackEyeCamera */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		DE482D31288FE72A00B9D021 /* Resources */ = {
+		DEAB11282912921000371406 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE482D43288FE72A00B9D021 /* LaunchScreen.storyboard in Resources */,
-				DE482D40288FE72A00B9D021 /* Assets.xcassets in Resources */,
-				DE482D3E288FE72A00B9D021 /* Main.storyboard in Resources */,
+				DEAB113A2912921200371406 /* LaunchScreen.storyboard in Resources */,
+				DEAB11372912921200371406 /* Assets.xcassets in Resources */,
+				DEAB11352912921000371406 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		DE482D2F288FE72A00B9D021 /* Sources */ = {
+		DEAB11262912921000371406 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE482D4B288FFD7D00B9D021 /* DimUnDim.swift in Sources */,
-				DE482D3B288FE72A00B9D021 /* ViewController.swift in Sources */,
-				DE482D37288FE72A00B9D021 /* AppDelegate.swift in Sources */,
-				DE482D39288FE72A00B9D021 /* SceneDelegate.swift in Sources */,
+				DE517707291A998E00ACCACC /* DimUnDim.swift in Sources */,
+				DEAB11322912921000371406 /* ViewController.swift in Sources */,
+				DEAB112E2912921000371406 /* AppDelegate.swift in Sources */,
+				DEAB11302912921000371406 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		DE482D3C288FE72A00B9D021 /* Main.storyboard */ = {
+		DEAB11332912921000371406 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				DE482D3D288FE72A00B9D021 /* Base */,
+				DEAB11342912921000371406 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		DE482D41288FE72A00B9D021 /* LaunchScreen.storyboard */ = {
+		DEAB11382912921200371406 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				DE482D42288FE72A00B9D021 /* Base */,
+				DEAB11392912921200371406 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -180,13 +170,13 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		DE482D45288FE72A00B9D021 /* Debug */ = {
+		DEAB113C2912921200371406 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -230,7 +220,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -240,13 +230,13 @@
 			};
 			name = Debug;
 		};
-		DE482D46288FE72A00B9D021 /* Release */ = {
+		DEAB113D2912921200371406 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -284,7 +274,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -294,7 +284,7 @@
 			};
 			name = Release;
 		};
-		DE482D48288FE72A00B9D021 /* Debug */ = {
+		DEAB113F2912921200371406 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -303,22 +293,22 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = BlackEye/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = BlackEyeV2;
-				INFOPLIST_KEY_NSCameraUsageDescription = Whatever;
-				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = Whatever;
+				INFOPLIST_FILE = BlackEyeCamera/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = yyy;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = yyy;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ArikSegal.Tutorial.BlackEye.V2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ArikSegal.Tutorial.BlackEyeCamera;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -326,7 +316,7 @@
 			};
 			name = Debug;
 		};
-		DE482D49288FE72A00B9D021 /* Release */ = {
+		DEAB11402912921200371406 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -335,22 +325,22 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = BlackEye/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = BlackEyeV2;
-				INFOPLIST_KEY_NSCameraUsageDescription = Whatever;
-				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = Whatever;
+				INFOPLIST_FILE = BlackEyeCamera/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = yyy;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = yyy;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ArikSegal.Tutorial.BlackEye.V2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ArikSegal.Tutorial.BlackEyeCamera;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -361,25 +351,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DE482D2E288FE72A00B9D021 /* Build configuration list for PBXProject "BlackEye" */ = {
+		DEAB11252912921000371406 /* Build configuration list for PBXProject "BlackEyeCamera" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DE482D45288FE72A00B9D021 /* Debug */,
-				DE482D46288FE72A00B9D021 /* Release */,
+				DEAB113C2912921200371406 /* Debug */,
+				DEAB113D2912921200371406 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DE482D47288FE72A00B9D021 /* Build configuration list for PBXNativeTarget "BlackEye" */ = {
+		DEAB113E2912921200371406 /* Build configuration list for PBXNativeTarget "BlackEyeCamera" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DE482D48288FE72A00B9D021 /* Debug */,
-				DE482D49288FE72A00B9D021 /* Release */,
+				DEAB113F2912921200371406 /* Debug */,
+				DEAB11402912921200371406 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = DE482D2B288FE72A00B9D021 /* Project object */;
+	rootObject = DEAB11222912921000371406 /* Project object */;
 }

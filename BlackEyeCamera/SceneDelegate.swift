@@ -1,19 +1,18 @@
 //
 //  SceneDelegate.swift
-//  BlackEye
+//  BlackEyeCamera
 //
-//  Created by Arik Segal on 26/07/2022.
+//  Created by Arik Segal on 02/11/2022.
 //
 
 import UIKit
+class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
-final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
 
     func sceneDidBecomeActive(_ scene: UIScene) {
         DimUnDim.shared.dim()
     }
-
     func sceneWillResignActive(_ scene: UIScene) {
         DimUnDim.shared.unDim()
     }
