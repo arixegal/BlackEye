@@ -11,7 +11,23 @@ import AVFoundation
 class ViewController: UIViewController {
     private let photoOutput = AVCapturePhotoOutput()
     private let session = AVCaptureSession()
+    private let isSwipeToExitEnabled = UserDefaults.standard.bool(forKey: "swipe_to_exit")
     private lazy var curtainView: UIView = {
+        let btn = makeQuitButton(addTargetAction: !isSwipeToExitEnabled)
+        guard isSwipeToExitEnabled else {
+            return btn
+        }
+        
+        let directions: [UISwipeGestureRecognizer.Direction] = [.up, .down, .right, .left]
+        directions.forEach {
+            let recognizer = UISwipeGestureRecognizer(target: self, action: #selector(quit))
+            recognizer.direction = $0
+            btn.addGestureRecognizer(recognizer)
+        }
+        return btn
+    }()
+
+    private func makeQuitButton(addTargetAction: Bool) -> UIButton {
         let size = UIScreen.main.bounds.size
         let btn = UIButton(
             frame: CGRect(
@@ -22,10 +38,12 @@ class ViewController: UIViewController {
             )
         )
         btn.backgroundColor = UIColor.black
-        btn.addTarget(self, action: #selector(quit), for: .touchDown)
+        if addTargetAction {
+            btn.addTarget(self, action: #selector(quit), for: .touchDown)
+        }
         return btn
-    }()
-
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(curtainView)
