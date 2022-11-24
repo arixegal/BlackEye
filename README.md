@@ -8,8 +8,8 @@ https://medium.com/@arikisintown/how-to-create-an-ios-app-that-takes-secret-phot
 This branch contains code for enabling Exit by a Swipe gesture instead of a Tap.
 The UI for enabling this option will be availble through the iPhone settings app, by implementing an iOS Settings Bundle.
 
-After enabling this option, a tap will not cause the appo to exit. 
-This allows the user to pretend to be texting messages wile the app is taking photos.    
+After enabling this option, a tap will not cause the app to exit. 
+This allows the user to pretend to be texting messages while the app is taking photos.    
 
  
  
