@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DE517707291A998E00ACCACC /* DimUnDim.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE517706291A998E00ACCACC /* DimUnDim.swift */; };
+		DEA3D035292F9773007DAE7A /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DEA3D034292F9773007DAE7A /* Settings.bundle */; };
 		DEAB112E2912921000371406 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAB112D2912921000371406 /* AppDelegate.swift */; };
 		DEAB11302912921000371406 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAB112F2912921000371406 /* SceneDelegate.swift */; };
 		DEAB11322912921000371406 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAB11312912921000371406 /* ViewController.swift */; };
@@ -18,6 +19,8 @@
 
 /* Begin PBXFileReference section */
 		DE517706291A998E00ACCACC /* DimUnDim.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DimUnDim.swift; sourceTree = "<group>"; };
+		DEA3D033292F842C007DAE7A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		DEA3D034292F9773007DAE7A /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		DEAB112A2912921000371406 /* BlackEyeCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlackEyeCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEAB112D2912921000371406 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEAB112F2912921000371406 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +45,8 @@
 		DEAB11212912921000371406 = {
 			isa = PBXGroup;
 			children = (
+				DEA3D033292F842C007DAE7A /* README.md */,
+				DEA3D034292F9773007DAE7A /* Settings.bundle */,
 				DEAB112C2912921000371406 /* BlackEyeCamera */,
 				DEAB112B2912921000371406 /* Products */,
 			);
@@ -128,6 +133,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEA3D035292F9773007DAE7A /* Settings.bundle in Resources */,
 				DEAB113A2912921200371406 /* LaunchScreen.storyboard in Resources */,
 				DEAB11372912921200371406 /* Assets.xcassets in Resources */,
 				DEAB11352912921000371406 /* Main.storyboard in Resources */,
