@@ -14,19 +14,19 @@ class ViewController: UIViewController {
     private let isSwipeToExitEnabled = UserDefaults.standard.bool(forKey: "swipe_to_exit")
     private lazy var curtainView: UIView = {
         let btn = makeQuitButton(addTargetAction: !isSwipeToExitEnabled)
-        guard isSwipeToExitEnabled else {
-            return btn
-        }
-        
+        return isSwipeToExitEnabled ? addSwipeTo(view: btn) : btn
+    }()
+
+    private func addSwipeTo(view: UIView) -> UIView {
         let directions: [UISwipeGestureRecognizer.Direction] = [.up, .down, .right, .left]
         directions.forEach {
             let recognizer = UISwipeGestureRecognizer(target: self, action: #selector(quit))
             recognizer.direction = $0
-            btn.addGestureRecognizer(recognizer)
+            view.addGestureRecognizer(recognizer)
         }
-        return btn
-    }()
-
+        return view
+    }
+    
     private func makeQuitButton(addTargetAction: Bool) -> UIButton {
         let size = UIScreen.main.bounds.size
         let btn = UIButton(
