@@ -5,13 +5,32 @@
 //  Created by Arik Segal on 02/11/2022.
 //
 
-import UIKit
 import AVFoundation
+import MediaPlayer
+import UIKit
 
 class ViewController: UIViewController {
     private let photoOutput = AVCapturePhotoOutput()
     private let session = AVCaptureSession()
     private let isSwipeToExitEnabled = UserDefaults.standard.bool(forKey: "swipe_to_exit")
+    private var hiddenSystemVolumeSlider: UISlider?
+    private var systemVolume: Float {
+        get {
+            return hiddenSystemVolumeSlider?.value ?? -1.0
+        }
+        set {
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.01) { [weak self] in
+                if let self,
+                   let slider = self.hiddenSystemVolumeSlider {
+                    slider.value = newValue
+                    print("System volume changed to \(newValue)")
+                } else {
+                    print("Failed to set system volume")
+                    assertionFailure()
+                }
+            }
+        }
+    }
     private lazy var curtainView: UIView = {
         let btn = makeQuitButton(addTargetAction: !isSwipeToExitEnabled)
         return isSwipeToExitEnabled ? addSwipeTo(view: btn) : btn
@@ -47,11 +66,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(curtainView)
+        setupVolumeControl()
     }
-
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        systemVolume = 0.0
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
             if let _ = setupCaptureSession() {
                 takePhoto()
@@ -62,6 +82,13 @@ class ViewController: UIViewController {
             print("Camera not available")
         }
     }
+    
+    private func setupVolumeControl() {
+        let volumeView = MPVolumeView(frame: CGRect(x: -CGFloat.greatestFiniteMagnitude, y:0, width:0, height:0))
+        view.addSubview(volumeView)
+        hiddenSystemVolumeSlider = volumeView.subviews.first(where: { $0 is UISlider }) as? UISlider
+    }
+    
     /// Will quit the application with animation
     @objc private func quit() {
         DimUnDim.shared.unDim() // Restore normal screen brightness
