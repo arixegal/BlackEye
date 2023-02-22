@@ -14,6 +14,11 @@ class ViewController: UIViewController {
     private let session = AVCaptureSession()
     private let isSwipeToExitEnabled = UserDefaults.standard.bool(forKey: "swipe_to_exit")
     private var hiddenSystemVolumeSlider: UISlider?
+    
+    private var outputVolumeObserver: NSKeyValueObservation?
+    private let audioSession = AVAudioSession.sharedInstance()
+
+    
     private var systemVolume: Float {
         get {
             return hiddenSystemVolumeSlider?.value ?? -1.0
@@ -23,7 +28,7 @@ class ViewController: UIViewController {
                 if let self,
                    let slider = self.hiddenSystemVolumeSlider {
                     slider.value = newValue
-                    print("System volume changed to \(newValue)")
+                    print("System volume changed programmatically to \(newValue)")
                 } else {
                     print("Failed to set system volume")
                     assertionFailure()
@@ -31,11 +36,27 @@ class ViewController: UIViewController {
             }
         }
     }
+    
     private lazy var curtainView: UIView = {
         let btn = makeQuitButton(addTargetAction: !isSwipeToExitEnabled)
         return isSwipeToExitEnabled ? addSwipeTo(view: btn) : btn
     }()
 
+    func listenToVolumeButton() {
+        do {
+            try audioSession.setActive(true)
+        } catch {
+            return print("Failed to activate audio session: \(error)")
+        }
+
+        outputVolumeObserver = audioSession.observe(\.outputVolume) { [weak self] (audioSession, changes) in
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .milliseconds(100)) { [weak self] in
+                print("System Volume: \(String(describing: self?.systemVolume))")
+                // To do: change zoom
+            }
+        }
+    }
+    
     private func addSwipeTo(view: UIView) -> UIView {
         let directions: [UISwipeGestureRecognizer.Direction] = [.up, .down, .right, .left]
         directions.forEach {
@@ -74,6 +95,7 @@ class ViewController: UIViewController {
         systemVolume = 0.0
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
             if let _ = setupCaptureSession() {
+                listenToVolumeButton()
                 takePhoto()
             } else {
                 print("Failed to establish capture session")
@@ -129,10 +151,11 @@ class ViewController: UIViewController {
     }
     
     private func takePhoto() {
-        photoOutput.capturePhoto(with: AVCapturePhotoSettings(), delegate: self)
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .seconds(1)) { [weak self] in
-            self?.takePhoto()
-        }
+//        photoOutput.capturePhoto(with: AVCapturePhotoSettings(), delegate: self)
+//        photoOutput.capturePhoto(with: AVCapturePhotoSettings(), delegate: self)
+//        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .seconds(1)) { [weak self] in
+//            self?.takePhoto()
+//        }
     }
 }
 
