@@ -19,10 +19,11 @@ class ViewController: UIViewController {
     private let audioSession = AVAudioSession.sharedInstance()
     private let cameraDevice = AVCaptureDevice.default(for: .video)
     private let zoomLimit = 0.5
+    private var scaleFactor: CGFloat = 1.0
     
     private var systemVolume: Float {
         get {
-            return hiddenSystemVolumeSlider?.value ?? -1.0
+            hiddenSystemVolumeSlider?.value ?? -1.0
         }
         set {
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.01) { [weak self] in
@@ -60,7 +61,10 @@ class ViewController: UIViewController {
                         device.activeFormat.videoMaxZoomFactor * CGFloat(self.systemVolume) * self.zoomLimit,
                         1
                     )
+                    let isMovingUp = newScaleFactor > self.scaleFactor
+                    print("Is moving up: \(isMovingUp)")
                     self.update(device: device, scaleFactor: newScaleFactor)
+                    self.scaleFactor = newScaleFactor
                     print("New desired factor: \(newScaleFactor)")
                 } else {
                     print("Failed to update zoom factor: No camera device")
