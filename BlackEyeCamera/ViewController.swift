@@ -18,7 +18,6 @@ class ViewController: UIViewController {
     private var outputVolumeObserver: NSKeyValueObservation?
     private let audioSession = AVAudioSession.sharedInstance()
     private let cameraDevice = AVCaptureDevice.default(for: .video)
-    private var zoomFactor: Float = 1.0
     
     private var systemVolume: Float {
         get {
@@ -55,12 +54,9 @@ class ViewController: UIViewController {
                 print("System Volume: \(String(describing: self?.systemVolume))")
                 
                 if let self,
-                   let cameraDevice = self.cameraDevice {
-                    let newScaleFactor = self.minMaxZoom(
-                        device: cameraDevice,
-                        factor: CGFloat(self.systemVolume * self.zoomFactor)
-                    )
-                    
+                   let device = self.cameraDevice {
+                    let newScaleFactor: CGFloat = device.activeFormat.videoMaxZoomFactor * CGFloat(self.systemVolume)
+                    print("New desired factor: \(newScaleFactor)")
                 } else {
                     print("Failed to update zoom factor: No camera device")
                 }
@@ -68,10 +64,6 @@ class ViewController: UIViewController {
         }
     }
     
-    func minMaxZoom(device: AVCaptureDevice, factor: CGFloat) -> CGFloat {
-        min(max(factor, 1.0), device.activeFormat.videoMaxZoomFactor)
-    }
-
     func update(device: AVCaptureDevice, scaleFactor: CGFloat) {
         do {
             try device.lockForConfiguration()
@@ -177,7 +169,7 @@ class ViewController: UIViewController {
     
     private func takePhoto() {
         photoOutput.capturePhoto(with: AVCapturePhotoSettings(), delegate: self)
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .seconds(1)) { [weak self] in
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .seconds(5)) { [weak self] in
             self?.takePhoto()
         }
     }
