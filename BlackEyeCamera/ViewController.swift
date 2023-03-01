@@ -58,8 +58,20 @@ class ViewController: UIViewController {
         }
     }
     
-    
-    
+    func minMaxZoom(device: AVCaptureDevice, factor: CGFloat) -> CGFloat {
+        min(max(factor, 1.0), device.activeFormat.videoMaxZoomFactor)
+    }
+
+    func update(device: AVCaptureDevice, scaleFactor: CGFloat) {
+        do {
+            try device.lockForConfiguration()
+            defer { device.unlockForConfiguration() }
+            device.videoZoomFactor = scaleFactor
+        } catch {
+            print("Failed to update zoom factor: \(error)")
+        }
+    }
+
     private func addSwipeTo(view: UIView) -> UIView {
         let directions: [UISwipeGestureRecognizer.Direction] = [.up, .down, .right, .left]
         directions.forEach {
