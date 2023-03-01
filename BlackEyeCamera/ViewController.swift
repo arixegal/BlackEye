@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     private var outputVolumeObserver: NSKeyValueObservation?
     private let audioSession = AVAudioSession.sharedInstance()
     private let cameraDevice = AVCaptureDevice.default(for: .video)
+    private let zoomLimit = 0.5
     
     private var systemVolume: Float {
         get {
@@ -56,7 +57,7 @@ class ViewController: UIViewController {
                 if let self,
                    let device = self.cameraDevice {
                     let newScaleFactor: CGFloat = max(
-                        device.activeFormat.videoMaxZoomFactor * CGFloat(self.systemVolume),
+                        device.activeFormat.videoMaxZoomFactor * CGFloat(self.systemVolume) * self.zoomLimit,
                         1
                     )
                     self.update(device: device, scaleFactor: newScaleFactor)
