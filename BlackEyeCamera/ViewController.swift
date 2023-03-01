@@ -55,7 +55,11 @@ class ViewController: UIViewController {
                 
                 if let self,
                    let device = self.cameraDevice {
-                    let newScaleFactor: CGFloat = device.activeFormat.videoMaxZoomFactor * CGFloat(self.systemVolume)
+                    let newScaleFactor: CGFloat = max(
+                        device.activeFormat.videoMaxZoomFactor * CGFloat(self.systemVolume),
+                        1
+                    )
+                    self.update(device: device, scaleFactor: newScaleFactor)
                     print("New desired factor: \(newScaleFactor)")
                 } else {
                     print("Failed to update zoom factor: No camera device")
