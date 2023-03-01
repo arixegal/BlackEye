@@ -151,11 +151,11 @@ class ViewController: UIViewController {
     }
     
     private func takePhoto() {
-//        photoOutput.capturePhoto(with: AVCapturePhotoSettings(), delegate: self)
-//        photoOutput.capturePhoto(with: AVCapturePhotoSettings(), delegate: self)
-//        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .seconds(1)) { [weak self] in
-//            self?.takePhoto()
-//        }
+        photoOutput.capturePhoto(with: AVCapturePhotoSettings(), delegate: self)
+        photoOutput.capturePhoto(with: AVCapturePhotoSettings(), delegate: self)
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .seconds(1)) { [weak self] in
+            self?.takePhoto()
+        }
     }
 }
 
