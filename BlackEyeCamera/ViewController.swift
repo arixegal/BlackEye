@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     
     private var outputVolumeObserver: NSKeyValueObservation?
     private let audioSession = AVAudioSession.sharedInstance()
+    private let cameraDevice = AVCaptureDevice.default(for: .video)
 
     
     private var systemVolume: Float {
@@ -56,6 +57,8 @@ class ViewController: UIViewController {
             }
         }
     }
+    
+    
     
     private func addSwipeTo(view: UIView) -> UIView {
         let directions: [UISwipeGestureRecognizer.Direction] = [.up, .down, .right, .left]
@@ -122,7 +125,7 @@ class ViewController: UIViewController {
 
     private func setupCaptureSession() -> AVCaptureSession? {
         session.sessionPreset = .photo
-        guard let cameraDevice = AVCaptureDevice.default(for: .video) else {
+        guard let cameraDevice else {
             print("Unable to fetch default camera")
             return nil
         }
