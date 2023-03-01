@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     private var outputVolumeObserver: NSKeyValueObservation?
     private let audioSession = AVAudioSession.sharedInstance()
     private let cameraDevice = AVCaptureDevice.default(for: .video)
-
+    private var zoomFactor: Float = 1.0
     
     private var systemVolume: Float {
         get {
@@ -53,7 +53,17 @@ class ViewController: UIViewController {
         outputVolumeObserver = audioSession.observe(\.outputVolume) { [weak self] (audioSession, changes) in
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .milliseconds(100)) { [weak self] in
                 print("System Volume: \(String(describing: self?.systemVolume))")
-                // To do: change zoom
+                
+                if let self,
+                   let cameraDevice = self.cameraDevice {
+                    let newScaleFactor = self.minMaxZoom(
+                        device: cameraDevice,
+                        factor: CGFloat(self.systemVolume * self.zoomFactor)
+                    )
+                    
+                } else {
+                    print("Failed to update zoom factor: No camera device")
+                }
             }
         }
     }
