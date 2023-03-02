@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     private var outputVolumeObserver: NSKeyValueObservation?
     private let audioSession = AVAudioSession.sharedInstance()
     private let cameraDevice = AVCaptureDevice.default(for: .video)
-    private let zoomLimit = 0.5
+    private let zoomLimit = 0.1
     private var scaleFactor: CGFloat = 1.0
     
     private var systemVolume: Float {
